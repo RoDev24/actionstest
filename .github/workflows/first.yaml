@@ -21,6 +21,7 @@ jobs:
         shell: python
   run-windows-commands:
     runs-on: windows-latest
+    needs: ["run-shell-commands"]
     steps: 
       - name: Directory
         run: pwd  
