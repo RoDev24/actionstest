@@ -7,22 +7,10 @@ jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
     steps:
-      - name: echo string
-        run: echo "Hello" 
+      - name: checkout
+        uses: actions/checkout@v1
+      
       - name: Multi line string
         run: |
           pwd
-          node -v
-          ls -a   
-      - name: python commands
-        run: |
-          import platform
-          print(platform.processor())
-        shell: python
-  run-windows-commands:
-    runs-on: windows-latest
-    needs: ["run-shell-commands"]
-    steps: 
-      - name: Directory
-        run: pwd  
-        shell: bash        
+          ls -a    
