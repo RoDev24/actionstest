@@ -10,7 +10,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v1
       - name: Set Terraform  
-        uses: hasicorp/setup-terraform@v2
+        uses: hashicorp/setup-terraform@v2
         with: 
           terraform_version: 1.1.9
       - name: Terraform init
